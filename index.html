@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,16 +8,16 @@
     font-family: 'Mangolia Script';
     src: local('Mangolia Script');
   }
- 
+
   * { box-sizing: border-box; }
- 
+
   html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     overflow: hidden;
   }
- 
+
   body {
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #ffe4ec 0%, #ffd1de 35%, #ffc9d6 60%, #ffe8ef 100%);
@@ -25,13 +25,13 @@
     animation: bgFlow 14s ease infinite;
     position: relative;
   }
- 
+
   @keyframes bgFlow {
     0%   { background-position: 0% 50%; }
     50%  { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
- 
+
   /* ---------- floating decorations ---------- */
   .decor {
     position: fixed;
@@ -40,7 +40,7 @@
     overflow: hidden;
     z-index: 1;
   }
- 
+
   .heart {
     position: absolute;
     bottom: -60px;
@@ -49,11 +49,11 @@
     animation: floatUp linear infinite;
     user-select: none;
   }
- 
+
   .heart.alt {
     color: rgba(255, 255, 255, 0.75);
   }
- 
+
   @keyframes floatUp {
     0% {
       transform: translateY(0) translateX(0) rotate(0deg) scale(0.8);
@@ -67,7 +67,7 @@
       opacity: 0;
     }
   }
- 
+
   .sparkle {
     position: absolute;
     width: 6px;
@@ -77,12 +77,12 @@
     box-shadow: 0 0 8px 2px rgba(255,255,255,0.9);
     animation: twinkle 2.5s ease-in-out infinite;
   }
- 
+
   @keyframes twinkle {
     0%, 100% { opacity: 0.15; transform: scale(0.6); }
     50% { opacity: 1; transform: scale(1.3); }
   }
- 
+
   /* soft glowing blobs */
   .blob {
     position: absolute;
@@ -91,12 +91,12 @@
     opacity: 0.5;
     animation: drift 18s ease-in-out infinite;
   }
- 
+
   @keyframes drift {
     0%, 100% { transform: translate(0,0) scale(1); }
     50% { transform: translate(30px, -20px) scale(1.15); }
   }
- 
+
   /* ---------- pages ---------- */
   .page {
     position: relative;
@@ -111,7 +111,7 @@
     opacity: 1;
     transition: opacity 0.6s ease;
   }
- 
+
   .page.hidden {
     opacity: 0;
     pointer-events: none;
@@ -119,7 +119,7 @@
     top: 0;
     left: 0;
   }
- 
+
   /* ---------- SORRY text ---------- */
   .sorry-word {
     font-family: 'Mangolia Script', 'Brush Script MT', 'Segoe Script', cursive;
@@ -132,22 +132,22 @@
       0 0 30px rgba(255, 77, 126, 0.6),
       4px 4px 0 rgba(196, 30, 78, 0.35),
       0 6px 18px rgba(0, 0, 0, 0.15);
-    margin: 0;
+    margin: 0 0 45px 0;
     line-height: 1;
     animation: gentlePulse 3.5s ease-in-out infinite, appear 1.2s ease;
     letter-spacing: 2px;
   }
- 
+
   @keyframes gentlePulse {
     0%, 100% { transform: scale(1) rotate(-2deg); }
     50% { transform: scale(1.04) rotate(1deg); }
   }
- 
+
   @keyframes appear {
     0% { opacity: 0; transform: translateY(-40px) scale(0.85); }
     100% { opacity: 1; transform: translateY(0) scale(1); }
   }
- 
+
   .sub-line {
     font-size: 1.1rem;
     color: #b5476b;
@@ -157,7 +157,7 @@
     opacity: 0.85;
     animation: appear 1.6s ease;
   }
- 
+
   /* ---------- buttons ---------- */
   .btn-row {
     position: relative;
@@ -168,7 +168,7 @@
     min-height: 90px;
     width: min(90vw, 640px);
   }
- 
+
   .btn {
     padding: 16px 30px;
     font-size: 1rem;
@@ -179,22 +179,22 @@
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     font-family: 'Segoe UI', sans-serif;
   }
- 
+
   .btn-forgive {
     background: linear-gradient(135deg, #ff8fab, #ff6f91);
     color: #fff;
     box-shadow: 0 8px 20px rgba(255, 111, 145, 0.45);
   }
- 
+
   .btn-forgive:hover {
     transform: translateY(-4px) scale(1.05);
     box-shadow: 0 12px 26px rgba(255, 111, 145, 0.6);
   }
- 
+
   .btn-forgive:active {
     transform: translateY(-1px) scale(0.98);
   }
- 
+
   .btn-flee {
     background: #fff;
     color: #ff6f91;
@@ -203,12 +203,12 @@
     position: fixed;
     z-index: 5;
   }
- 
+
   .btn-flee.static {
     position: relative;
     z-index: auto;
   }
- 
+
   /* ---------- page two ---------- */
   .thank-title {
     font-family: 'Georgia', serif;
@@ -219,13 +219,13 @@
     margin: 0 0 18px 0;
     animation: popIn 0.9s cubic-bezier(.26,1.4,.4,1);
   }
- 
+
   @keyframes popIn {
     0% { opacity: 0; transform: scale(0.4) rotate(-6deg); }
     70% { transform: scale(1.08) rotate(2deg); }
     100% { opacity: 1; transform: scale(1) rotate(0deg); }
   }
- 
+
   .best-line {
     font-family: 'Segoe UI', sans-serif;
     font-size: 1.3rem;
@@ -234,20 +234,20 @@
     letter-spacing: 1px;
     animation: appear 1.4s ease;
   }
- 
+
   .big-heart {
     font-size: 4rem;
     margin-top: 30px;
     color: #ff6f91;
     animation: beat 1.2s ease-in-out infinite;
   }
- 
+
   @keyframes beat {
     0%, 100% { transform: scale(1); }
     25% { transform: scale(1.15); }
     45% { transform: scale(0.95); }
   }
- 
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.001ms !important;
@@ -258,31 +258,30 @@
 </style>
 </head>
 <body>
- 
+
 <div class="decor" id="decor"></div>
- 
+
 <!-- PAGE 1 -->
 <div class="page" id="page1">
   <h1 class="sorry-word">Sorry</h1>
-  <p class="sub-line">I truly mean it, from the bottom of my heart 💗</p>
- 
+
   <div class="btn-row" id="btnRow">
     <button class="btn btn-forgive" id="forgiveBtn">I have forgiven</button>
     <button class="btn btn-flee static" id="fleeBtn">I will not forgive</button>
   </div>
 </div>
- 
+
 <!-- PAGE 2 -->
 <div class="page hidden" id="page2">
   <h1 class="thank-title">THANK YOU SO MUCH</h1>
   <p class="best-line">YOU ARE THE BEST</p>
   <div class="big-heart">❤️</div>
 </div>
- 
+
 <script>
   // ---------- decorative floating hearts & sparkles ----------
   const decor = document.getElementById('decor');
- 
+
   function createHearts(count) {
     const glyphs = ['❤','💗','💕','💖','♡'];
     for (let i = 0; i < count; i++) {
@@ -297,7 +296,7 @@
       decor.appendChild(h);
     }
   }
- 
+
   function createSparkles(count) {
     for (let i = 0; i < count; i++) {
       const s = document.createElement('div');
@@ -308,7 +307,7 @@
       decor.appendChild(s);
     }
   }
- 
+
   function createBlobs() {
     const colors = ['#ffb6c1', '#ff9fb3', '#ffe0eb', '#ff8fab'];
     const positions = [
@@ -329,37 +328,37 @@
       decor.appendChild(b);
     });
   }
- 
+
   createBlobs();
   createHearts(22);
   createSparkles(18);
- 
+
   // ---------- runaway "I will not forgive" button ----------
   const fleeBtn = document.getElementById('fleeBtn');
   const btnRow = document.getElementById('btnRow');
   let hasEscaped = false;
- 
+
   function moveFleeButton() {
     const margin = 20;
     const btnWidth = fleeBtn.offsetWidth || 200;
     const btnHeight = fleeBtn.offsetHeight || 56;
- 
+
     const maxX = window.innerWidth - btnWidth - margin;
     const maxY = window.innerHeight - btnHeight - margin;
- 
+
     const newX = margin + Math.random() * Math.max(0, maxX - margin);
     const newY = margin + Math.random() * Math.max(0, maxY - margin);
- 
+
     if (!hasEscaped) {
       fleeBtn.classList.remove('static');
       hasEscaped = true;
     }
- 
+
     fleeBtn.style.transition = 'top 0.35s ease, left 0.35s ease';
     fleeBtn.style.left = newX + 'px';
     fleeBtn.style.top = newY + 'px';
   }
- 
+
   fleeBtn.addEventListener('mouseenter', moveFleeButton);
   fleeBtn.addEventListener('click', function(e) {
     e.preventDefault();
@@ -369,21 +368,21 @@
     e.preventDefault();
     moveFleeButton();
   }, { passive: false });
- 
+
   // ---------- forgive button -> page 2 ----------
   const forgiveBtn = document.getElementById('forgiveBtn');
   const page1 = document.getElementById('page1');
   const page2 = document.getElementById('page2');
- 
+
   forgiveBtn.addEventListener('click', function() {
     page1.classList.add('hidden');
     page2.classList.remove('hidden');
   });
- 
+
   window.addEventListener('resize', function() {
     if (hasEscaped) moveFleeButton();
   });
 </script>
- 
+
 </body>
 </html>
